@@ -1,0 +1,25 @@
+{
+  "CirnoMod.Keyword.Frozen": {
+    "NAMES": [
+      "Frozen"
+    ],
+    "PROPERNAME": "Frozen",
+    "DESCRIPTION": "Reduces Strength while gains Block at the end of its turn."
+  },
+  "CirnoMod.Keyword.Flying": {
+    "NAMES": [
+      "Flying",
+      "Flight"
+    ],
+    "PROPERNAME": "Flight",
+    "DESCRIPTION": "Reduces attack damage taken. Becomes stunned "
+  },
+  "CirnoMod.Keyword.Stunned": {
+    "NAMES": [
+      "Stun",
+      "Stunned"
+    ],
+    "PROPERNAME": "Stunned",
+    "DESCRIPTION": "Energy becomes zero."
+  }
+}

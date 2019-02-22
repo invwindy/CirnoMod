@@ -1,0 +1,31 @@
+{
+  "CirnoMod.Relic.FairyWisdom": {
+    "NAME": "Fairy Wisdom",
+    "FLAVOR": "\"I am the smartest!\"",
+    "DESCRIPTIONS": [
+      "You may remove a card from your deck every #b6 battles.",
+      "It's time to remove some unnecessary knowledge ..."
+    ]
+  },
+  "CirnoMod.Relic.FrozenFrog": {
+    "NAME": "Frozen Frog",
+    "FLAVOR": "This is only a symbol. No frog is harmed in Slay the Spire™.",
+    "DESCRIPTIONS": [
+      "At the end of your turn, apply #b1 #yFrozen to ALL enemies. For every #b4 turns, remove all #yFrozen on each enemy and deal double damage to it."
+    ]
+  },
+  "CirnoMod.Relic.FrozenSunflower": {
+    "NAME": "Frozen Sunflower",
+    "FLAVOR": "Some flavor text here.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, if number of cards in discard pile is greater or equal to that in drawing pile, gain [E]"
+    ]
+  },
+  "CirnoMod.Relic.ColdFire": {
+    "NAME": "Fluorescence Fire",
+    "FLAVOR": "Some flavor text here.",
+    "DESCRIPTIONS": [
+      "You may add a \"Sound Asleep\" in your deck at Rest Site."
+    ]
+  }
+}

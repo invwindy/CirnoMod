@@ -1,0 +1,10 @@
+{
+  "CirnoMod.Card.Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "CirnoMod.Card.Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  }
+}

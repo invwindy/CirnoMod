@@ -1,0 +1,11 @@
+{
+  "modid": "CirnoMod",
+  "name": "Cirno the Ice Fairy",
+  "author_list": ["invwindy"],
+  "description": "Adds a new playable enemy character: Cirno.",
+  "version": "0.1",
+  "sts_version": "01-03-2019",
+  "mts_version": "3.6.3",
+  "dependencies": ["basemod", "stslib"]
+
+}
