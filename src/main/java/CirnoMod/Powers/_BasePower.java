@@ -1,6 +1,7 @@
 package CirnoMod.Powers;
 
 import CirnoMod.Generic.Indexing;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -29,8 +30,13 @@ public class _BasePower extends AbstractPower {
         this.amount = amount;
         this.owner = owner;
         this.source = source;
-        this.img = ImageMaster.loadImage(info.getPath());
         this.type = info.getType();
+
+        String path128 = helper.getPathLarge();
+        String path48 = helper.getPathSmall();
+        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path128), 0, 0, 84, 84);
+        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path48), 0, 0, 32, 32);
+
         updateDescription();
     }
 

@@ -22,7 +22,6 @@ public class Frozen extends _BasePower {
     {
         super(owner, source, amount, new FrozenHelper());
         updateDescription();
-        loadRegion("armor");
     }
     public static String getID(){ return FrozenHelper.ID; }
 

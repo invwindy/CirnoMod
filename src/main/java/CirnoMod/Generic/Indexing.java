@@ -18,7 +18,8 @@ public class Indexing {
         return  region + "/" + name + ".png";
     }
     public static String cardPath(String name) { return getResource("Cards", name); }
-    public static String powerPath(String name) { return getResource("Powers", name); }
+    public static String powerPathLarge(String name) { return getResource("Powers", name + "84"); }
+    public static String powerPathSmall(String name) { return getResource("Powers", name + "32"); }
     public static String relicPath(String name) { return getResource("Relics", name); }
     public static String relicOutlinePath(String name) { return getResource("Relics", name + "Outline"); }
 
