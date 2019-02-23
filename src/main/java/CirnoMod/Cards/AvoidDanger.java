@@ -35,7 +35,7 @@ public class AvoidDanger extends _BaseBlockCard
         if(m.intent == AbstractMonster.Intent.ATTACK) {
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         }else {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new Flying(p, p, magicNumber)));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new Flying(p, p, magicNumber), magicNumber));
         }
     }
 }

@@ -4,6 +4,7 @@ import CirnoMod.Patches.AbstractCardEnum;
 import CirnoMod.Patches.CirnoEnum;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -14,6 +15,7 @@ import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
@@ -58,20 +60,23 @@ public class Cirno extends CustomPlayer {
     private static final String shoulderUrl = "chars/Cirno/Shoulder1.png";
     private static final String corpseUrl = "chars/Cirno/Corpse.png";
 
-
     public Cirno(String playerName)
     {
         super(playerName, CirnoEnum.CIRNO, orbTextures, orbVfxPath, layerSpeeds, null, null);
         initializeClass(standUrl, shoulder2Url, shoulderUrl, corpseUrl, getLoadout(), 20, 10, 220, 290, new EnergyManager(ENERGY_PER_TURN));
     }
 
+    public void update()
+    {
+        super.update();
+    }
+
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> deck = new ArrayList<>();
         deck.add("CirnoMod.Card.Strike");
-        deck.add("CirnoMod.Card.Strike");
-
         deck.add("CirnoMod.Card.Defend");
+        deck.add("CirnoMod.Card.Chillness");
         deck.add("CirnoMod.Card.QuickEvasion");
         deck.add("CirnoMod.Card.AvoidDanger");
         return deck;
@@ -91,6 +96,7 @@ public class Cirno extends CustomPlayer {
                 CharacterStrings.TEXT[0],
                 STARTING_HP, MAX_HP, ORB_SLOTS, STARTING_GOLD, CARD_DRAW, this,
                 getStartingRelics(), getStartingDeck(), false);
+
     }
 
     @Override

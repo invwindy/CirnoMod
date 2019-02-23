@@ -12,7 +12,7 @@ public class Indexing {
     public static String powerID(String name) { return getID("Power", name); }
     public static String relicID(String name) { return getID("Relic", name); }
 
-    public static String getResource(String region, String name) {
+    private static String getResource(String region, String name) {
         //return "resources/" + region + "/" + name + ".png";
         logging.info("Getting Resource: region [" + region + "]; name: [" + name + "].");
         return  region + "/" + name + ".png";
@@ -23,12 +23,13 @@ public class Indexing {
     public static String relicOutlinePath(String name) { return getResource("Relics", name + "Outline"); }
 
     public static String format(String f, Object ...params) {
+        String res = f;
         int index = 0;
         for(Object obj : params)
         {
-            f.replaceAll(String.format("{%d}", index), obj.toString());
+            res = res.replaceAll(String.format("\\{%d\\}", index), obj.toString());
             index++;
         }
-        return f;
+        return res;
     }
 }

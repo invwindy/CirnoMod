@@ -21,10 +21,12 @@ public class Frozen extends _BasePower {
     public Frozen(AbstractCreature owner, AbstractCreature source, int amount)
     {
         super(owner, source, amount, new FrozenHelper());
+        updateDescription();
+        loadRegion("armor");
     }
     public static String getID(){ return FrozenHelper.ID; }
 
-    int reduceAmount()
+    private int reduceAmount()
     {
         return 1;
     }
@@ -33,17 +35,35 @@ public class Frozen extends _BasePower {
         return new Object[]{ this.name, this.amount, reduceAmount() };
     }
 
-    public void stackPower(int amount)
+    private void applyStrengthModifier(int n)
     {
-        super.stackPower(amount);
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, amount)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, n), n));
     }
 
-    public void reducePower(int amount)
+    public void onInitialApplication()
     {
-        super.reducePower(amount);
-        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, new StrengthPower(this.owner, amount), 1));
+        applyStrengthModifier(-this.amount);
     }
+
+    public void stackPower(int n)
+    {
+        int oldAmount = this.amount;
+        super.stackPower(n);
+        applyStrengthModifier(oldAmount - this.amount);
+    }
+
+    public void reducePower(int n)
+    {
+        int oldAmount = this.amount;
+        super.reducePower(n);
+        applyStrengthModifier(oldAmount - this.amount);
+    }
+
+    //public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source)
+    //{
+    //    super.onApplyPower(power, target, source);
+    //    applyStrengthModifier(-power.amount);
+    //}
 
     public void atEndOfTurn(boolean isPlayer)
     {

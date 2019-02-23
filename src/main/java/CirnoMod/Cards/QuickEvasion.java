@@ -31,7 +31,6 @@ public class QuickEvasion extends _BaseBlockCard
     public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {
         for(int i = 0; i < this.magicNumber; ++i)
         {
-            LogManager.getLogger(this.getClass().getName()).info(magicNumber);
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         }
     }

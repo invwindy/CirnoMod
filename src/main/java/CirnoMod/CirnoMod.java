@@ -1,9 +1,6 @@
 package CirnoMod;
 
-import CirnoMod.Cards.AvoidDanger;
-import CirnoMod.Cards.Defend;
-import CirnoMod.Cards.QuickEvasion;
-import CirnoMod.Cards.Strike;
+import CirnoMod.Cards.*;
 import CirnoMod.Character.Cirno;
 import CirnoMod.Patches.AbstractCardEnum;
 import CirnoMod.Patches.CirnoEnum;
@@ -125,6 +122,7 @@ public class CirnoMod implements PostInitializeSubscriber, EditCharactersSubscri
         logger.info("begin editing cards");
         BaseMod.addCard(new Strike());
         BaseMod.addCard(new Defend());
+        BaseMod.addCard(new Chillness());
         BaseMod.addCard(new QuickEvasion());
         BaseMod.addCard(new AvoidDanger());
         logger.info("done editing cards");
