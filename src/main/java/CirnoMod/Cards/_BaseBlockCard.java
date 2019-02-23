@@ -19,10 +19,8 @@ public class _BaseBlockCard extends _BaseCard {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
     }
 
-    public void upgrade() {
-        if (!this.upgraded) {
-            upgradeName();
-            upgradeBlock(helper.getUpgradeBlock());
-        }
+    public void upgradeAction()
+    {
+        upgradeBlock(helper.getUpgradeBlock());
     }
 }

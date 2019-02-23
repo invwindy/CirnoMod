@@ -19,10 +19,8 @@ public class _BaseAttackCard extends _BaseCard {
                 helper.getAttackEffect()));
     }
 
-    public void upgrade() {
-        if (!this.upgraded) {
-            upgradeName();
-            upgradeDamage(helper.getUpgradeDamage());
-        }
+    public void upgradeAction()
+    {
+        upgradeDamage(helper.getUpgradeDamage());
     }
 }

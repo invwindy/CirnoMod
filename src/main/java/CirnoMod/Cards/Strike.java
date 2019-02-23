@@ -12,6 +12,8 @@ class StrikeHelper extends _BaseAttackHelper
     public AbstractCard.CardTarget getTarget()     { return AbstractCard.CardTarget.ENEMY; }
     public int getBaseDamage()                     { return 6; }
     public int getUpgradeDamage()                  { return 3; }
+    public int getMagicNumber()                    { return 0; }
+    public int getUpgradeMagicNumber()             { return 0; }
     public AbstractGameAction.AttackEffect getAttackEffect(){
                                               return AbstractGameAction.AttackEffect.SLASH_DIAGONAL; }
     public AbstractCard.CardTags[] getCardTags()   { return new AbstractCard.CardTags[]{

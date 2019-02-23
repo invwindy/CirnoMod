@@ -18,6 +18,8 @@ class SoundAsleepHelper extends _BaseCardHelper
 {
     public String getID()                          { return "SoundAsleep"; }
     public int getCost()                           { return 3; }
+    public int getMagicNumber()                    { return 2; }
+    public int getUpgradeMagicNumber()             { return -1; }
     public AbstractCard.CardRarity getRarity()     { return AbstractCard.CardRarity.RARE; }
     public AbstractCard.CardTarget getTarget()     { return AbstractCard.CardTarget.SELF; }
     public AbstractCard.CardType getType()         { return AbstractCard.CardType.POWER; }
@@ -28,15 +30,11 @@ public class SoundAsleep extends _BaseCard {
     public SoundAsleep()
     {
         super(new SoundAsleepHelper());
-
     }
 
     public void use(AbstractPlayer player, AbstractMonster monster)
     {
-        int amount;
-        if(upgraded) amount = 1;
-        else amount = 2;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new Stunned(player), amount));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new Stunned(player), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new HealAction(player, player, 999));
 
         AbstractCard masterCard = null;

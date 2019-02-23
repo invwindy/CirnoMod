@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 abstract class _BaseCardHelper {
     abstract String getID();
     abstract int getCost();
+    abstract int getMagicNumber();
+    abstract int getUpgradeMagicNumber();
     abstract AbstractCard.CardType getType();
     abstract AbstractCard.CardRarity getRarity();
     abstract AbstractCard.CardTarget getTarget();
