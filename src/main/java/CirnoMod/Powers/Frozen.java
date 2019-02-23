@@ -11,7 +11,8 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 
 class FrozenHelper extends _PowerParamHelper
 {
-    public String getID() { return "Frozen"; }
+    public static String ID = "Frozen";
+    public String getID() { return FrozenHelper.ID; }
     public String getPath() { return ""; }
     public AbstractPower.PowerType getType() { return AbstractPower.PowerType.DEBUFF; }
 }
@@ -21,6 +22,7 @@ public class Frozen extends _BasePower {
     {
         super(owner, source, amount, new FrozenHelper());
     }
+    public static String getID(){ return FrozenHelper.ID; }
 
     int reduceAmount()
     {

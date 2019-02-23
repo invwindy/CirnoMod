@@ -9,7 +9,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 class FlyingHelper extends _PowerParamHelper
 {
-    public String getID() { return "Flying"; }
+    public static String ID = "Flying";
+    public String getID() { return FlyingHelper.ID; }
     public String getPath() { return ""; }
     public AbstractPower.PowerType getType() { return AbstractPower.PowerType.BUFF; }
 }
@@ -19,6 +20,8 @@ public class Flying extends _BasePower {
     {
         super(owner, source, amount, new FlyingHelper());
     }
+
+    public static String getID(){ return FlyingHelper.ID; }
 
     private int reduceAmount() {
         return 1;

@@ -12,7 +12,8 @@ import com.megacrit.cardcrawl.vfx.combat.StunStarEffect;
 
 class StunnedHelper extends _PowerParamHelper
 {
-    public String getID() { return "Stunned"; }
+    public static String ID = "Frozen";
+    public String getID() { return StunnedHelper.ID; }
     public String getPath() { return ""; }
     public AbstractPower.PowerType getType() { return AbstractPower.PowerType.DEBUFF; }
 }
@@ -21,6 +22,7 @@ public class Stunned extends _BasePower {
     public Stunned(AbstractCreature owner) {
         super(owner, owner, 1, new StunnedHelper());
     }
+    public static String getID(){ return StunnedHelper.ID; }
 
     public Object[] descriptionObjects() {
         return new Object[]{ this.amount };

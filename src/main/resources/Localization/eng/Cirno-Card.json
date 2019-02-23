@@ -10,5 +10,9 @@
   "CirnoMod.Card.QuickEvasion": {
     "NAME": "Quick Evasion",
     "DESCRIPTION": "Gain !B! Block !M! times."
+  },
+  "CirnoMod.Card.AvoidDanger": {
+    "NAME": "Avoid Danger",
+    "DESCRIPTION": "If the enemy intends to attack, gain !B! Block; NL otherwise gain !M! Flight."
   }
 }

@@ -1,5 +1,6 @@
 package CirnoMod;
 
+import CirnoMod.Cards.AvoidDanger;
 import CirnoMod.Cards.Defend;
 import CirnoMod.Cards.QuickEvasion;
 import CirnoMod.Cards.Strike;
@@ -125,6 +126,7 @@ public class CirnoMod implements PostInitializeSubscriber, EditCharactersSubscri
         BaseMod.addCard(new Strike());
         BaseMod.addCard(new Defend());
         BaseMod.addCard(new QuickEvasion());
+        BaseMod.addCard(new AvoidDanger());
         logger.info("done editing cards");
     }
 

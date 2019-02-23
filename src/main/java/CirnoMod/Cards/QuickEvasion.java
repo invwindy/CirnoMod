@@ -12,7 +12,7 @@ class QuickEvasionHelper extends _BaseBlockHelper
 {
     public String getID()                          { return "QuickEvasion"; }
     public int getCost()                           { return 1; }
-    public AbstractCard.CardRarity getRarity()     { return AbstractCard.CardRarity.BASIC; }
+    public AbstractCard.CardRarity getRarity()     { return AbstractCard.CardRarity.COMMON; }
     public AbstractCard.CardTarget getTarget()     { return AbstractCard.CardTarget.SELF; }
     public int getBaseBlock()                      { return 2; }
     public int getUpgradeBlock()                   { return -1; }

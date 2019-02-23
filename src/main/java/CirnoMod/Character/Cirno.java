@@ -62,7 +62,7 @@ public class Cirno extends CustomPlayer {
     public Cirno(String playerName)
     {
         super(playerName, CirnoEnum.CIRNO, orbTextures, orbVfxPath, layerSpeeds, null, null);
-        initializeClass(standUrl, shoulder2Url, shoulderUrl, corpseUrl, getLoadout(), 20, -10, 220, 290, new EnergyManager(ENERGY_PER_TURN));
+        initializeClass(standUrl, shoulder2Url, shoulderUrl, corpseUrl, getLoadout(), 20, 10, 220, 290, new EnergyManager(ENERGY_PER_TURN));
     }
 
     @Override
@@ -70,15 +70,10 @@ public class Cirno extends CustomPlayer {
         ArrayList<String> deck = new ArrayList<>();
         deck.add("CirnoMod.Card.Strike");
         deck.add("CirnoMod.Card.Strike");
-        deck.add("CirnoMod.Card.Strike");
-        deck.add("CirnoMod.Card.Strike");
-        deck.add("CirnoMod.Card.Strike");
 
         deck.add("CirnoMod.Card.Defend");
-        deck.add("CirnoMod.Card.Defend");
-        deck.add("CirnoMod.Card.Defend");
         deck.add("CirnoMod.Card.QuickEvasion");
-        deck.add("CirnoMod.Card.QuickEvasion");
+        deck.add("CirnoMod.Card.AvoidDanger");
         return deck;
     }
 
