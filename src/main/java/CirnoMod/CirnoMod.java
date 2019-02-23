@@ -1,6 +1,7 @@
 package CirnoMod;
 
 import CirnoMod.Cards.Defend;
+import CirnoMod.Cards.QuickEvasion;
 import CirnoMod.Cards.Strike;
 import CirnoMod.Character.Cirno;
 import CirnoMod.Patches.AbstractCardEnum;
@@ -37,7 +38,7 @@ import java.util.Random;
 
 @SpireInitializer
 public class CirnoMod implements PostInitializeSubscriber, EditCharactersSubscriber, EditStringsSubscriber, EditRelicsSubscriber, EditCardsSubscriber {
-    public static final Logger logger = LogManager.getLogger(CirnoMod.class.getName());
+    private static final Logger logger = LogManager.getLogger(CirnoMod.class.getName());
     private static final Color CIRNO_COLOR = new Color(0x99CCFF);
 
     public CirnoMod()
@@ -123,7 +124,8 @@ public class CirnoMod implements PostInitializeSubscriber, EditCharactersSubscri
         logger.info("begin editing cards");
         BaseMod.addCard(new Strike());
         BaseMod.addCard(new Defend());
-        logger.info("begin editing cards");
+        BaseMod.addCard(new QuickEvasion());
+        logger.info("done editing cards");
     }
 
     @Override
@@ -136,9 +138,9 @@ public class CirnoMod implements PostInitializeSubscriber, EditCharactersSubscri
         logger.info("done editing relics");
     }
 
-    public static final String MODNAME = "Cirno the Ice Fairy";
-    public static final String AUTHOR = "invwindy";
-    public static final String DESCRIPTION = "Adds the Cirno character to the game";
+    private static final String MODNAME = "Cirno the Ice Fairy";
+    private static final String AUTHOR = "invwindy";
+    private static final String DESCRIPTION = "Adds the Cirno character to the game";
 
     @Override
     public void receivePostInitialize() {

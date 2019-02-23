@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.metrics.MetricData;
 import com.megacrit.cardcrawl.ui.campfire.RestOption;
 import com.megacrit.cardcrawl.vfx.campfire.CampfireSleepEffect;
 import com.megacrit.cardcrawl.vfx.campfire.CampfireSleepScreenCoverEffect;
-import com.megacrit.cardcrawl.vfx.campfire.ColdFireEffect;
 
 public class ColdFireOption extends RestOption {
 
@@ -16,7 +15,6 @@ public class ColdFireOption extends RestOption {
         this.img = new Texture("");
         this.usable = true;
         this.label = "Cirno.RestOption.ColdFire";
-        this.usable = true;
     }
 
     public void useOption() {

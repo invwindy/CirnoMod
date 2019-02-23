@@ -23,7 +23,7 @@ import java.util.ArrayList;
 
 public class Cirno extends CustomPlayer {
 
-    public static String CharacterID = "Cirno";
+    private static String CharacterID = "Cirno";
     private static com.megacrit.cardcrawl.localization.CharacterStrings CharacterStrings = CardCrawlGame.languagePack.getCharacterString(CharacterID);
 
     private static final int ENERGY_PER_TURN = 3;
@@ -33,7 +33,7 @@ public class Cirno extends CustomPlayer {
     private static final int CARD_DRAW = 5;
     private static final int ORB_SLOTS = 0;
 
-    public static final String[] orbTextures = {
+    private static final String[] orbTextures = {
             "chars/Cirno/orbs_bright/Border1.png",
             "chars/Cirno/orbs_bright/6.png",
             "chars/Cirno/orbs_bright/5.png",
@@ -48,15 +48,15 @@ public class Cirno extends CustomPlayer {
             "chars/Cirno/orbs_dark/4.png",
             "chars/Cirno/orbs_dark/1.png",
     };
-    public static final String orbVfxPath = "chars/Cirno/orbs_bright/vfx.png";
+    private static final String orbVfxPath = "chars/Cirno/orbs_bright/vfx.png";
 
-    public static final float[] layerSpeeds = {
+    private static final float[] layerSpeeds = {
             80.0F, 40.0F, -40.0F, 20.0F, 0.0F
     };
-    public static final String standUrl = "chars/Cirno/Stand.png";
-    public static final String shoulder2Url = "chars/Cirno/Shoulder2.png";
-    public static final String shoulderUrl = "chars/Cirno/Shoulder1.png";
-    public static final String corpseUrl = "chars/Cirno/Corpse.png";
+    private static final String standUrl = "chars/Cirno/Stand.png";
+    private static final String shoulder2Url = "chars/Cirno/Shoulder2.png";
+    private static final String shoulderUrl = "chars/Cirno/Shoulder1.png";
+    private static final String corpseUrl = "chars/Cirno/Corpse.png";
 
 
     public Cirno(String playerName)
@@ -77,8 +77,8 @@ public class Cirno extends CustomPlayer {
         deck.add("CirnoMod.Card.Defend");
         deck.add("CirnoMod.Card.Defend");
         deck.add("CirnoMod.Card.Defend");
-        deck.add("CirnoMod.Card.Defend");
-        deck.add("CirnoMod.Card.Defend");
+        deck.add("CirnoMod.Card.QuickEvasion");
+        deck.add("CirnoMod.Card.QuickEvasion");
         return deck;
     }
 
