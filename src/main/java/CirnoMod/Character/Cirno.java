@@ -74,10 +74,10 @@ public class Cirno extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> deck = new ArrayList<>();
-        deck.add("CirnoMod.Card.Strike");
-        deck.add("CirnoMod.Card.Defend");
+        deck.add("CirnoMod.Card.Snowfall");
+        deck.add("CirnoMod.Card.FreezingAura");
         deck.add("CirnoMod.Card.Chillness");
-        deck.add("CirnoMod.Card.QuickEvasion");
+        deck.add("CirnoMod.Card.UnnaturalColdAir");
         deck.add("CirnoMod.Card.AvoidDanger");
         return deck;
     }

@@ -11,18 +11,12 @@ import CirnoMod.Relics.FrozenSunflower;
 import basemod.BaseMod;
 import basemod.ModLabel;
 import basemod.ModPanel;
-import basemod.abstracts.CustomUnlockBundle;
-import basemod.interfaces.EditCardsSubscriber;
-import basemod.interfaces.EditCharactersSubscriber;
-import basemod.interfaces.EditKeywordsSubscriber;
-import basemod.interfaces.EditRelicsSubscriber;
-import basemod.interfaces.EditStringsSubscriber;
-import basemod.interfaces.PostInitializeSubscriber;
-import basemod.interfaces.SetUnlocksSubscriber;
+import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.*;
@@ -34,8 +28,10 @@ import java.util.Hashtable;
 import java.util.Map;
 import java.util.Random;
 
+import CirnoMod.Generic.Keyword;
+
 @SpireInitializer
-public class CirnoMod implements PostInitializeSubscriber, EditCharactersSubscriber, EditStringsSubscriber, EditRelicsSubscriber, EditCardsSubscriber {
+public class CirnoMod implements PostInitializeSubscriber, EditCharactersSubscriber, EditStringsSubscriber, EditRelicsSubscriber, EditCardsSubscriber, EditKeywordsSubscriber {
     private static final Logger logger = LogManager.getLogger(CirnoMod.class.getName());
     private static final Color CIRNO_COLOR = new Color(0x99CCFF);
 
@@ -85,10 +81,9 @@ public class CirnoMod implements PostInitializeSubscriber, EditCharactersSubscri
         logger.info("done editing characters");
     }
 
-    @Override
-    public void receiveEditStrings() {
+    String getLanguageFlag()
+    {
         String languageFlag;
-
         switch(Settings.language)
         {
             case ENG:
@@ -101,19 +96,26 @@ public class CirnoMod implements PostInitializeSubscriber, EditCharactersSubscri
                 languageFlag = "eng";
                 break;
         }
+        return languageFlag;
+    }
+
+    @Override
+    public void receiveEditStrings() {
+        String languageFlag = getLanguageFlag();
 
         Hashtable<Class, String> hd = new Hashtable<Class, String>() {{
             put(CharacterStrings.class, "Cirno-Character");
-            put(KeywordStrings.class, "Cirno-Keyword");
             put(CardStrings.class, "Cirno-Card");
             put(PowerStrings.class, "Cirno-Power");
             put(RelicStrings.class, "Cirno-Relic");
         }};
         for(Map.Entry entry : hd.entrySet())
         {
+            logger.info("begin editing " + entry.getValue() + " strings.");
             Class cls = (Class)entry.getKey();
             String filename = (String)entry.getValue();
             BaseMod.loadCustomStringsFile(cls, "Localization/" + languageFlag + "/" + filename + ".json");
+            logger.info("done editing " + entry.getValue() + " strings.");
         }
     }
 
@@ -125,6 +127,9 @@ public class CirnoMod implements PostInitializeSubscriber, EditCharactersSubscri
         BaseMod.addCard(new Chillness());
         BaseMod.addCard(new QuickEvasion());
         BaseMod.addCard(new AvoidDanger());
+        BaseMod.addCard(new UnnaturalColdAir());
+        BaseMod.addCard(new FreezingAura());
+        BaseMod.addCard(new Snowfall());
         logger.info("done editing cards");
     }
 
@@ -148,5 +153,23 @@ public class CirnoMod implements PostInitializeSubscriber, EditCharactersSubscri
         ModPanel settingsPanel = new ModPanel();
         settingsPanel.addUIElement(new ModLabel("*No setting is available for Cirno mod now.*", 400.0f, 700.0f, settingsPanel, (me)->{}));
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
+    }
+
+    @Override
+    public void receiveEditKeywords() {
+        String languageFlag = getLanguageFlag();
+
+        logger.info("begin editing Cirno-Keyword strings");
+        final String json = Gdx.files.internal("Localization/" + languageFlag + "/Cirno-Keyword.json").readString(String.valueOf(StandardCharsets.UTF_8));
+
+
+        Gson gson = new Gson();
+        final Keyword[] keywords = (Keyword[])gson.fromJson(json, Keyword[].class);
+        if (keywords != null) {
+            for (Keyword keyword : keywords) {
+                BaseMod.addKeyword(keyword.PROPERNAME, keyword.NAMES, keyword.DESCRIPTION);
+            }
+        }
+        logger.info("done editing Cirno-Keyword strings");
     }
 }

@@ -12,7 +12,6 @@ class FlyingHelper extends _PowerParamHelper
 {
     public static String ID = "Flying";
     public String getID() { return FlyingHelper.ID; }
-    public String getPath() { return ""; }
     public AbstractPower.PowerType getType() { return AbstractPower.PowerType.BUFF; }
 }
 

@@ -11,28 +11,26 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import org.apache.logging.log4j.LogManager;
 
-class ChillnessHelper extends _BaseBlockHelper
+class ChillnessHelper extends _BaseCardHelper
 {
     public String getID()                          { return "Chillness"; }
     public int getCost()                           { return 1; }
     public AbstractCard.CardRarity getRarity()     { return AbstractCard.CardRarity.BASIC; }
-    public AbstractCard.CardTarget getTarget()     { return AbstractCard.CardTarget.SELF_AND_ENEMY; }
-    public int getBaseBlock()                      { return 4; }
-    public int getUpgradeBlock()                   { return 0; }
-    public int getMagicNumber()                    { return 2; }
+    public AbstractCard.CardType getType()         { return AbstractCard.CardType.SKILL; }
+    public AbstractCard.CardTarget getTarget()     { return AbstractCard.CardTarget.ENEMY; }
+    public int getMagicNumber()                    { return 3; }
     public int getUpgradeMagicNumber()             { return 0; }
     public AbstractCard.CardTags[] getCardTags()   { return new AbstractCard.CardTags[]{ };
     }
 }
 
-public class Chillness extends _BaseBlockCard
+public class Chillness extends _BaseCard
 {
     public Chillness(){
         super(new ChillnessHelper());
     }
 
     public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {
-        super.use(p, m);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new Frozen(m, p, magicNumber), magicNumber));
     }
 

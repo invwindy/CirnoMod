@@ -2,13 +2,13 @@
   "CirnoMod.Power.Flying": {
     "NAME": "Flight",
     "DESCRIPTIONS": [
-      "Receives #b{1}% less attack damage. Reduces #y{0} by #b{2} when attacked. Becomes #yStun if cancelled."
+      "Receives #b{1}% less attack damage. NL Receiving attack damage reduces #y{0} by #b{2}. NL Becomes #yStunned if cancelled."
     ]
   },
   "CirnoMod.Power.Frozen": {
     "NAME": "Frozen",
     "DESCRIPTIONS": [
-      "Reduce #b{1} #yStrength. At the end of turn, gain #b{1} #yBlock and reduce #y{0} by #b{2}."
+      "Reduces #b{1} #yStrength. NL At the end of turn, gains #b{1} #yBlock and reduces #y{0} by #b{2}."
     ]
   },
   "CirnoMod.Power.Stunned": {

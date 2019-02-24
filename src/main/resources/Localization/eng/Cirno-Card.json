@@ -9,8 +9,8 @@
   },
   "CirnoMod.Card.Chillness": {
     "NAME": "Chillness",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Frozen.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Apply !M! Frozen to ALL enemies."
+    "DESCRIPTION": "Apply !M! Frozen.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Frozen to ALL enemies."
   },
   "CirnoMod.Card.QuickEvasion": {
     "NAME": "Quick Evasion",
@@ -19,5 +19,17 @@
   "CirnoMod.Card.AvoidDanger": {
     "NAME": "Avoid Danger",
     "DESCRIPTION": "If the enemy intends to attack, gain !B! Block; NL otherwise gain !M! Flight."
+  },
+  "CirnoMod.Card.UnnaturalColdAir": {
+    "NAME": "Unnatural Cold Air",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Frozen."
+  },
+  "CirnoMod.Card.FreezingAura": {
+    "NAME": "Freezing Aura",
+    "DESCRIPTION": "Gain !M! Thorns and Plated Armor until your next turn."
+  },
+  "CirnoMod.Card.Snowfall": {
+    "NAME": "Snowfall",
+    "DESCRIPTION": "Apply !M! Frozen to ALL characters. NL Exhaust."
   }
 }
