@@ -130,6 +130,12 @@ public class CirnoMod implements PostInitializeSubscriber, EditCharactersSubscri
         BaseMod.addCard(new UnnaturalColdAir());
         BaseMod.addCard(new FreezingAura());
         BaseMod.addCard(new Snowfall());
+        BaseMod.addCard(new IcicleShoot());
+        BaseMod.addCard(new FreezingWind());
+        BaseMod.addCard(new FlappingWings());
+        BaseMod.addCard(new AirStrike());
+        BaseMod.addCard(new QuickAttack());
+        BaseMod.addCard(new FairyTrick());
         logger.info("done editing cards");
     }
 
