@@ -79,6 +79,12 @@ public class Cirno extends CustomPlayer {
         deck.add("CirnoMod.Card.Chillness");
         deck.add("CirnoMod.Card.UnnaturalColdAir");
         deck.add("CirnoMod.Card.AvoidDanger");
+        deck.add("CirnoMod.Card.IcicleShoot");
+        deck.add("CirnoMod.Card.FreezingWind");
+        deck.add("CirnoMod.Card.FlappingWings");
+        deck.add("CirnoMod.Card.AirStrike");
+        deck.add("CirnoMod.Card.QuickAttack");
+        deck.add("CirnoMod.Card.FairyTrick");
         return deck;
     }
 
