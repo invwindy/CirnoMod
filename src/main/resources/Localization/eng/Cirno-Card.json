@@ -31,5 +31,29 @@
   "CirnoMod.Card.Snowfall": {
     "NAME": "Snowfall",
     "DESCRIPTION": "Apply !M! Frozen to ALL characters. NL Exhaust."
+  },
+  "CirnoMod.Card.IcicleShoot": {
+    "NAME": "IcicleShoot",
+    "DESCRIPTION": "Deal !D! damage, apply !M! Frozen."
+  },
+  "CirnoMod.Card.FreezingWind": {
+    "NAME": "FreezingWind",
+    "DESCRIPTION": "Deal !D! Damage and apply !M! Frozen to ALL enemies"
+  },
+  "CirnoMod.Card.FlappingWings": {
+    "NAME": "FlappingWings",
+    "DESCRIPTION": "Deal !D! Damage and gain 2 Flying"
+  },
+  "CirnoMod.Card.AirStrike": {
+    "NAME": "AirStrike",
+    "DESCRIPTION": "Deal !D! Damage. If Flying, deal !M! more damage."
+  },
+  "CirnoMod.Card.QuickAttack": {
+    "NAME": "QuickAttack",
+    "DESCRIPTION": "Deal !D! Damage. Gain !M! dexterity this turn."
+  },
+  "CirnoMod.Card.FairyTrick": {
+    "NAME": "FairyTrick",
+    "DESCRIPTION": "Deal !D! Damage, apply 3 vulnerable, draw !M! card, exhaust"
   }
 }
