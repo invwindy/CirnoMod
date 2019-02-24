@@ -26,6 +26,7 @@ public class FreezingAura extends _BasePower {
     }
     public static String getID(){ return FreezingAuraHelper.ID; }
 
+    public Object[] descriptionObjects(){ return new Object[]{ this.amount }; }
 
     public void onInitialApplication()
     {

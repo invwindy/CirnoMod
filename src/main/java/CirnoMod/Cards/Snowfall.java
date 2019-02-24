@@ -1,10 +1,12 @@
 package CirnoMod.Cards;
 
 import CirnoMod.Powers.Frozen;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.BlizzardEffect;
 
 class SnowfallHelper extends _BaseCardHelper
 {
@@ -27,6 +29,7 @@ public class Snowfall extends _BaseCard
     }
 
     public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new BlizzardEffect(60, false)));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new Frozen(p, p, magicNumber), magicNumber));
         for(AbstractMonster monster : AbstractDungeon.getMonsters().monsters)
         {

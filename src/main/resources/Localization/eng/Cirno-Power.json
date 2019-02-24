@@ -16,5 +16,11 @@
     "DESCRIPTIONS": [
       "Energy becomes zero for #b{0} turn."
     ]
+  },
+  "CirnoMod.Power.FreezingAura": {
+    "NAME": "Freezing Aura",
+    "DESCRIPTIONS": [
+      "Provides #b{0} #yThorns and #yPlated #Armor this turn."
+    ]
   }
 }
