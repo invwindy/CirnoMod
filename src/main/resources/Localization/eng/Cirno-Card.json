@@ -46,11 +46,11 @@
   },
   "CirnoMod.Card.AirStrike": {
     "NAME": "AirStrike",
-    "DESCRIPTION": "Deal !D! Damage. If Flying, deal !M! more damage."
+    "DESCRIPTION": "Deal !D! Damage. If Flying, deal 5 more damage."
   },
   "CirnoMod.Card.QuickAttack": {
     "NAME": "QuickAttack",
-    "DESCRIPTION": "Deal !D! Damage. Gain !M! dexterity this turn."
+    "DESCRIPTION": "Deal !D! Damage. Gain 1 dexterity this turn."
   },
   "CirnoMod.Card.FairyTrick": {
     "NAME": "FairyTrick",
