@@ -55,5 +55,15 @@
   "CirnoMod.Card.FairyTrick": {
     "NAME": "FairyTrick",
     "DESCRIPTION": "Deal !D! Damage, apply 3 vulnerable, draw !M! card, exhaust"
+  },
+  "CirnoMod.Card.FreeFire": {
+    "NAME": "FreeFire",
+    "DESCRIPTION": "Deal 9 damage, transform a random card.",
+    "UPGRADE_DESCRIPTION": "Deal 9 damage, transform a card."
+  },
+  "CirnoMod.Card.CarelessCharge": {
+    "NAME": "CarelessCharge",
+    "DESCRIPTION": "Lose all Block then deal Damage equal to !M! times of block lost",
+    "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)"
   }
 }
